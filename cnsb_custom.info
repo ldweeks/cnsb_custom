@@ -1,0 +1,6 @@
+name = Clearnote Songbook Customizations
+description = Provides the custom bits for the Clearnote Songbook.
+package = Clearnote Fellowship
+core = 7.x
+
+dependencies[] = views

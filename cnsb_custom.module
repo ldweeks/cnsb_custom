@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_views_api().
+ */
+function cnsb_custom_views_api() {
+  return array("version" => "3.0");
+}
+
+/*
+ * Implements hook_views_query_alter()
+ */
+function cnsb_custom_views_query_alter(&$view, &$query) {
+    // select the view name and display id you'd like to alter
+    if ($view->name == 'associated_songs') {
+        // the contextual filters are placed in where[0], so change the type of that where group to 'OR'
+        $query->where[0]['type'] = "OR";
+    }
+}
