@@ -16,4 +16,9 @@ function cnsb_custom_views_query_alter(&$view, &$query) {
         // the contextual filters are placed in where[0], so change the type of that where group to 'OR'
         $query->where[0]['type'] = "OR";
     }
+
+    if ($view->name == 'facet_enabled_song_taxonomy_pages') {
+        // the contextual filters are placed in where[0], so change the type of that where group to 'OR'
+        $query->where[0]['type'] = "OR";
+    }
 }
