@@ -17,8 +17,15 @@ function cnsb_custom_views_query_alter(&$view, &$query) {
         $query->where[0]['type'] = "OR";
     }
 
-    if ($view->name == 'facet_enabled_song_taxonomy_pages') {
+/*    if ($view->name == 'facet_enabled_song_taxonomy_pages') {
         // the contextual filters are placed in where[0], so change the type of that where group to 'OR'
         $query->where[0]['type'] = "OR";
-    }
+    }*/
 }
+
+/*function cnsb_custom_block_view_alter(&$data, $block) {
+  if ($block->region == 'sidebar_first') {
+    dpm($data, "Data");  // print form ID to messages
+    dpm($block, "Block");  // pretty print array using Krumo to messages
+  }
+}*/
