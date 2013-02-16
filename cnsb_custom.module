@@ -18,3 +18,10 @@ function cnsb_custom_views_query_alter(&$view, &$query) {
       $query->where[0]['type'] = "OR";
   }
 }
+
+/*
+ * Implements hook_form_FORM_ID_alter()
+ */
+function cnsb_custom_form_comment_form_alter(&$form, &$form_state) {
+  $form['actions']['submit']['#value'] = t('Post Comment');
+}
